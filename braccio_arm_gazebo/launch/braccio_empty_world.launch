@@ -7,7 +7,7 @@
   <arg name="use_sim_time" default="true"/>
   <arg name="gui" default="true"/>
   <arg name="headless" default="false"/>
-  <arg name="debug" default="true"/>
+  <arg name="debug" default="false"/>
 
   <!-- Load the URDF into the ROS Parameter Server -->
   <param name="robot_description" command="$(find xacro)/xacro.py '$(find braccio_arm_description)/urdf/braccio_arm.xacro'" />
@@ -23,7 +23,14 @@
   </include>
 
   <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
-  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" args="-urdf -Y 1.57 -model braccio_arm -param robot_description "/>
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" args="-urdf -model braccio_arm -param robot_description
+        -J base_joint 1.57 
+        -J shoulder_joint 1.57
+        -J elbow_joint 1.57
+        -J wrist_pitch_joint 1.57
+        -J wrist_roll_joint 1.57
+        -J gripper_joint 1.57
+        -J sub_gripper_joint 1.57"/>
 
   <!-- ros_control mobile_robot launch file -->
   <include file="$(find braccio_arm_control)/launch/braccio_arm_control.launch" /> 

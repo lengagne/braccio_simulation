@@ -130,7 +130,7 @@
 
     <joint name="sub_gripper_joint" type="revolute">
         <axis xyz="0 1 0" />
-        <mimic joint="gripper_joint" />
+<!--         <mimic joint="gripper_joint" /> -->
         <limit effort="1000.0" lower="1.2741" upper="2.3732" velocity="1.0" />
         <origin rpy="0 3.4383 0" xyz="-0.010 0 0.03" />
         <parent link="wrist_roll_link" />

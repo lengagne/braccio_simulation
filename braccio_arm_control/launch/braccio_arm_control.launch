@@ -6,13 +6,18 @@
 
   <!-- load the controllers -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
-	output="screen" ns="/braccio_arm" args="joint_state_controller"/>
+	output="screen" ns="/braccio_arm" args="base_joint_position_controller 
+        shoulder_joint_position_controller elbow_joint_position_controller wrist_pitch_joint_position_controller
+        wrist_roll_joint_position_controller gripper_joint_position_controller sub_gripper_joint_position_controller joint_state_controller"/>
 
+<!--    <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+	output="screen" ns="/braccio_arm" args="joint_position_controller joint_state_controller"/>-->
+  
 
   <!-- convert joint states to TF transforms for rviz, etc -->
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
+<!--  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">
     <param name="robot_description" command="$(find xacro)/xacro.py '$(find braccio_arm_description)/urdf/braccio_arm.xacro'" />
     <remap from="/joint_states" to="/braccio_arm/joint_states" />
-  </node>
+  </node>-->
 
 </launch>

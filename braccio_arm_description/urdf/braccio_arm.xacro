@@ -33,11 +33,11 @@
             </geometry>
             <material name="black" />
             <origin rpy="0 0 0" xyz="0 0 0" />
-        </visual>
+        </visual>     
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
-            <mass value="0.1"/>
-            <box_inertia m="0.1" x="0.1" y="0.1" z="0.1"/>
+            <mass value="0.05"/>
+            <box_inertia m="0.05" x="0.02" y="0.02" z="0.05"/>
         </inertial>
     </link>
 
@@ -51,8 +51,8 @@
         </visual>
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
-            <mass value="0.1"/>
-            <box_inertia m="0.1" x="0.1" y="0.1" z="0.1"/>
+            <mass value="0.05"/>
+            <box_inertia m="0.05" x="0.02" y="0.02" z="0.05"/>
         </inertial>        
     </link>
 
@@ -66,8 +66,8 @@
         </visual>
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
-            <mass value="0.1"/>
-            <box_inertia m="0.1" x="0.1" y="0.1" z="0.1"/>
+            <mass value="0.05"/>
+            <box_inertia m="0.05" x="0.02" y="0.02" z="0.05"/>
         </inertial>        
     </link>
 
@@ -81,8 +81,8 @@
         </visual>
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
-            <mass value="0.1"/>
-            <box_inertia m="0.1" x="0.1" y="0.1" z="0.1"/>
+            <mass value="0.05"/>
+            <box_inertia m="0.05" x="0.02" y="0.02" z="0.05"/>
         </inertial>        
     </link>
 
@@ -96,8 +96,8 @@
         </visual>
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
-            <mass value="0.1"/>
-            <box_inertia m="0.1" x="0.1" y="0.1" z="0.1"/>
+            <mass value="0.05"/>
+            <box_inertia m="0.05" x="0.02" y="0.02" z="0.05"/>
         </inertial>        
     </link>
 
@@ -111,8 +111,8 @@
         </visual>
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
-            <mass value="0.1"/>
-            <box_inertia m="0.1" x="0.1" y="0.1" z="0.1"/>
+            <mass value="0.05"/>
+            <box_inertia m="0.05" x="0.02" y="0.02" z="0.05"/>
         </inertial>        
     </link>
 
@@ -122,27 +122,48 @@
                 <mesh filename="package://braccio_arm_description/stl/braccio_left_gripper.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="white" />
-            <origin rpy="0 1.5708 0" xyz="0 -0.012 0" />
+            <origin rpy="0 1.5708 0" xyz="0 -0.007 0" />
         </visual>
+        <visual>
+            <geometry>
+                <mesh filename="package://braccio_arm_description/stl/braccio_left_gripper.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="white" />
+            <origin rpy="0 1.5708 0" xyz="0 -0.017 0" />
+        </visual>        
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
-            <mass value="0.1"/>
-            <box_inertia m="0.1" x="0.1" y="0.1" z="0.1"/>
+            <mass value="0.01"/>
+            <box_inertia m="0.01" x="0.02" y="0.02" z="0.05"/>
         </inertial>        
     </link>
 
     <link name="right_gripper_link">
+        <collision>
+            <geometry>
+                <cylinder length="0.01" radius=".053" />
+            </geometry>
+            <material name="black" />
+            <origin rpy="0 0 0" xyz="0 0 0" />
+        </collision>          
         <visual>
             <geometry>
                 <mesh filename="package://braccio_arm_description/stl/braccio_right_gripper.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="white" />
-            <origin rpy="0 1.5708 0" xyz="0 -0.012 0.010" />
+            <origin rpy="0 1.5708 0" xyz="0 -0.017 0.010" />
         </visual>
+        <visual>
+            <geometry>
+                <mesh filename="package://braccio_arm_description/stl/braccio_right_gripper.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="white" />
+            <origin rpy="0 1.5708 0" xyz="0 -0.007 0.010" />
+        </visual>        
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
-            <mass value="0.1"/>
-            <box_inertia m="0.1" x="0.1" y="0.1" z="0.1"/>
+            <mass value="0.01"/>
+            <box_inertia m="0.01" x="0.02" y="0.02" z="0.05"/>
         </inertial>        
     </link>
 
@@ -197,7 +218,7 @@
     <joint name="sub_gripper_joint" type="revolute">
         <axis xyz="0 1 0" />
         <mimic joint="gripper_joint" />
-        <limit effort="1000.0" lower="1.2741" upper="2.3732" velocity="1.0" />
+        <limit effort="1000.0" lower="0.1750" upper="1.2741" velocity="1.0" />
         <origin rpy="0 3.4383 0" xyz="-0.010 0 0.03" />
         <parent link="wrist_roll_link" />
         <child link="left_gripper_link" />
