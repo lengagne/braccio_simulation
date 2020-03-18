@@ -32,6 +32,8 @@
         -J gripper_joint 1.57
         -J sub_gripper_joint 1.57"/>
 
+  <node name="VectorTranslator" pkg="braccio_arm_gazebo" type="braccio_arm_vector_input"/>
+  
   <!-- ros_control mobile_robot launch file -->
   <include file="$(find braccio_arm_control)/launch/braccio_arm_control.launch" /> 
 
