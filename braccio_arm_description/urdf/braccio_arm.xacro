@@ -42,6 +42,13 @@
     </link>
 
     <link name="braccio_arm_base_link">
+        <collision>
+            <geometry>
+                <cylinder length="0.06" radius="0.04"/>
+            </geometry>
+            <material name="black" />
+            <origin rpy="0 0 0" xyz="0 0 0.03" />
+        </collision>          
         <visual>
             <geometry>
                 <mesh filename="package://braccio_arm_description/stl/braccio_base.stl" scale="0.001 0.001 0.001" />
@@ -57,6 +64,13 @@
     </link>
 
     <link name="shoulder_link">
+        <collision>
+            <geometry>
+                <cylinder length="0.10" radius="0.03"/>
+            </geometry>
+            <material name="black" />
+            <origin rpy="0 0 0" xyz="0 0 0.05" />
+        </collision>                  
         <visual>
             <geometry>
                 <mesh filename="package://braccio_arm_description/stl/braccio_shoulder.stl" scale="0.001 0.001 0.001" />
@@ -72,6 +86,13 @@
     </link>
 
     <link name="elbow_link">
+        <collision>
+            <geometry>
+                <cylinder length="0.10" radius="0.03"/>
+            </geometry>
+            <material name="black" />
+            <origin rpy="0 0 0" xyz="0 0 0.05" />
+        </collision>                  
         <visual>
             <geometry>
                 <mesh filename="package://braccio_arm_description/stl/braccio_elbow.stl" scale="0.001 0.001 0.001" />
@@ -87,6 +108,7 @@
     </link>
 
     <link name="wrist_pitch_link">
+                
         <visual>
             <geometry>
                 <mesh filename="package://braccio_arm_description/stl/braccio_wrist_pitch.stl" scale="0.001 0.001 0.001" />
@@ -102,6 +124,13 @@
     </link>
 
     <link name="wrist_roll_link">
+        <collision>
+            <geometry>
+                <cylinder length="0.08" radius="0.025"/>
+            </geometry>
+            <material name="black" />
+            <origin rpy="0 0 0" xyz="0 0 -0.02" />
+        </collision>          
         <visual>
             <geometry>
                 <mesh filename="package://braccio_arm_description/stl/braccio_wrist_roll.stl" scale="0.001 0.001 0.001" />
@@ -117,6 +146,13 @@
     </link>
 
     <link name="left_gripper_link">
+        <collision>
+            <geometry>
+                <box size="0.1 0.02 0.01"/>
+            </geometry>
+            <material name="black" />
+            <origin rpy="0 0 0" xyz="0.04 0 0" />
+        </collision>          
         <visual>
             <geometry>
                 <mesh filename="package://braccio_arm_description/stl/braccio_left_gripper.stl" scale="0.001 0.001 0.001" />
@@ -141,10 +177,10 @@
     <link name="right_gripper_link">
         <collision>
             <geometry>
-                <cylinder length="0.01" radius=".053" />
+                <box size="0.1 0.02 0.01"/>
             </geometry>
             <material name="black" />
-            <origin rpy="0 0 0" xyz="0 0 0" />
+            <origin rpy="0 0 0" xyz="0.04 0 0" />
         </collision>          
         <visual>
             <geometry>
