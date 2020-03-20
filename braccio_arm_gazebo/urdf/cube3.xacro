@@ -1,0 +1,14 @@
+<?xml version="3.0"?>
+
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <xacro:include filename="$(find braccio_arm_gazebo)/urdf/cube.xacro" />
+    <link name="my_box">
+        <aruco_cube t1="30" t2="31" t3="32" t4="33" t5="34" t6="35" dim="0.05" m="0.05"/>
+    </link>
+    <gazebo reference="my_box">
+    <mu1>100.0</mu1>
+    <mu2>100.0</mu2>
+    <minDepth>0.003</minDepth>  
+    <maxVel>0</maxVel>  
+    </gazebo>    
+</robot>

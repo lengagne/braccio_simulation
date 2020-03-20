@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"> 
+ <xacro:macro name="aruco_cube" params="t1 t2 t3 t4 t5 t6 dim m "> 
+   <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="${m}" />
+      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
+    </inertial>
+    <visual>
+      <origin xyz="${dim/2.0} 0 -${dim/2.0}"/>
+      <geometry>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker${t1}/meshes/Marker${t1}.dae" scale="${2.0*dim} ${2.0*dim} ${2.0*dim}"/>
+      </geometry>
+    </visual>
+   <visual>
+      <geometry>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker${t2}/meshes/Marker${t2}.dae" scale="${2.0*dim} ${2.0*dim} ${2.0*dim}"/>
+      </geometry>      
+        <origin xyz="0 ${dim/2.0} -${dim/2.0}"  rpy="0 0 1.57"/>
+    </visual>
+    <visual>
+      <geometry>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker${t3}/meshes/Marker${t3}.dae" scale="${2.0*dim} ${2.0*dim} ${2.0*dim}"/>
+      </geometry>      
+        <origin xyz="-${dim/2.0} 0 -${dim/2.0}"  rpy="0 0 3.14"/>
+    </visual>  
+   <visual>
+      <geometry>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker${t4}/meshes/Marker${t4}.dae" scale="${2.0*dim} ${2.0*dim} ${2.0*dim}"/>
+      </geometry>      
+        <origin xyz="0 -${dim/2.0} -${dim/2.0}"  rpy="0 0 -1.57"/>
+    </visual>   
+    <visual>
+      <geometry>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker${t5}/meshes/Marker${t5}.dae" scale="${2.0*dim} ${2.0*dim} ${2.0*dim}"/>
+      </geometry>      
+        <origin xyz="-${dim/2.0} 0 -${dim/2.0}"  rpy="0 1.57 0"/>
+    </visual>        
+    <visual>
+      <geometry>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker${t6}/meshes/Marker${t6}.dae" scale="${2.0*dim} ${2.0*dim} ${2.0*dim}"/>
+      </geometry>      
+        <origin xyz="${dim/2.0} 0 ${dim/2.0}"  rpy="0 -1.57 0"/>
+    </visual>           
+    <collision>
+      <geometry>
+        <box size="${dim} ${dim} ${dim}" />
+      </geometry>
+    </collision>
+</xacro:macro>     
+</robot>
