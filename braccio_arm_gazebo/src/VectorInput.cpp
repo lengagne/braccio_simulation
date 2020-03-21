@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 {
     msg_base.data = 1.57; 
     msg_elbow.data = 1.57; 
-    msg_gripper.data = 1.57; 
+    msg_gripper.data = 0.01; 
     msg_shoulder.data = 1.57; 
     msg_wrist_pitch.data = 1.57; 
     msg_wrist_roll.data = 1.57; 

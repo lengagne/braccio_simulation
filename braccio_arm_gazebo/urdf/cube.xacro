@@ -4,7 +4,7 @@
    <inertial>
       <origin xyz="0 0 0" />
       <mass value="${m}" />
-      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="100.0"  iyz="0.0"  izz="1.0" />
+      <inertia  ixx="${m*m/12.0}" ixy="0.0"  ixz="0.0"  iyy="${m*m/12.0}"  iyz="0.0"  izz="${m*m/12.0}" />
     </inertial>
     <visual>
       <origin xyz="${dim/2.0} 0 -${dim/2.0}"/>

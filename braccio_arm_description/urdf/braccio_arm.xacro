@@ -148,59 +148,73 @@
     <link name="left_gripper_link">
         <collision>
             <geometry>
-                <box size="0.1 0.02 0.01"/>
+                <box size="0.05 0.02 0.01"/>
             </geometry>
             <material name="black" />
-            <origin rpy="0 0 0" xyz="0.04 0 0" />
+            <origin rpy="0 -1.5708 0" xyz="0 0 -0.025" />
         </collision>          
         <visual>
+            <geometry>
+                <box size="0.05 0.02 0.01"/>
+            </geometry>
+            <material name="black" />
+            <origin rpy="0 -1.5708 0" xyz="0 0 -0.025" />
+        </visual>         
+<!--        <visual>
             <geometry>
                 <mesh filename="package://braccio_arm_description/stl/braccio_left_gripper.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="white" />
-            <origin rpy="0 1.5708 0" xyz="0 -0.007 0" />
+            <origin rpy="0 0 0" xyz="0 -0.007 0" />
         </visual>
         <visual>
             <geometry>
                 <mesh filename="package://braccio_arm_description/stl/braccio_left_gripper.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="white" />
-            <origin rpy="0 1.5708 0" xyz="0 -0.017 0" />
-        </visual>        
+            <origin rpy="0 0 0" xyz="0 -0.017 0" />
+        </visual>        -->
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <mass value="0.01"/>
-            <box_inertia m="0.01" x="0.02" y="0.02" z="0.05"/>
-        </inertial>        
+            <box_inertia m="0.01" x="0.01" y="0.025" z="0.005"/>
+        </inertial>    
     </link>
 
     <link name="right_gripper_link">
         <collision>
             <geometry>
-                <box size="0.1 0.02 0.01"/>
+                <box size="0.05 0.02 0.01"/>
             </geometry>
             <material name="black" />
-            <origin rpy="0 0 0" xyz="0.04 0 0" />
-        </collision>          
+            <origin rpy="0 -1.5708 0" xyz="0 0 -0.025" />
+        </collision>    
         <visual>
+            <geometry>
+                <box size="0.05 0.02 0.01"/>
+            </geometry>
+            <material name="black" />
+            <origin rpy="0 -1.5708 0" xyz="0 0 -0.025" />
+        </visual>           
+<!--        <visual>
             <geometry>
                 <mesh filename="package://braccio_arm_description/stl/braccio_right_gripper.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="white" />
-            <origin rpy="0 1.5708 0" xyz="0 -0.017 0.010" />
+            <origin rpy="0 0 0" xyz="0 -0.017 0.010" />
         </visual>
         <visual>
             <geometry>
                 <mesh filename="package://braccio_arm_description/stl/braccio_right_gripper.stl" scale="0.001 0.001 0.001" />
             </geometry>
             <material name="white" />
-            <origin rpy="0 1.5708 0" xyz="0 -0.007 0.010" />
-        </visual>        
+            <origin rpy="0 0 0" xyz="0 -0.007 0.010" />
+        </visual>   -->     
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <mass value="0.01"/>
-            <box_inertia m="0.01" x="0.02" y="0.02" z="0.05"/>
-        </inertial>        
+            <box_inertia m="0.01" x="0.01" y="0.025" z="0.005"/>
+        </inertial>                  
     </link>
 
     <joint name="base_joint" type="revolute">
@@ -237,25 +251,25 @@
 
     <joint name="wrist_roll_joint" type="revolute">
         <axis xyz="0 0 -1" />
-        <limit effort="1000.0" lower="0.0" upper="3.1416" velocity="1.0" />
+        <limit effort="1000.0" lower="0" upper="3.1416" velocity="1.0" />
         <origin rpy="0 0 1.5708" xyz="0 0.0 0.06" />
         <parent link="wrist_pitch_link" />
         <child link="wrist_roll_link" />
     </joint>
 
-    <joint name="gripper_joint" type="revolute">
-        <axis xyz="0 -1 0" />
-        <limit effort="1000.0" lower="0.1750" upper="1.2741" velocity="1.0" />
-        <origin rpy="0 -0.2967 0" xyz="0.010 0 0.03" />
+    <joint name="gripper_joint" type="prismatic">
+        <axis xyz="-1 0 0" />
+        <limit effort="1000.0" lower="0.02" upper="0.07" velocity="1.0" />
+        <origin rpy="0 0 0" xyz="0.010 0 0.08" />
         <parent link="wrist_roll_link" />
         <child link="right_gripper_link" />
     </joint>
 
-    <joint name="sub_gripper_joint" type="revolute">
-        <axis xyz="0 1 0" />
+    <joint name="sub_gripper_joint" type="prismatic">
+        <axis xyz="1 0 0" />
         <mimic joint="gripper_joint" />
-        <limit effort="1000.0" lower="0.1750" upper="1.2741" velocity="1.0" />
-        <origin rpy="0 3.4383 0" xyz="-0.010 0 0.03" />
+        <limit effort="1000.0" lower="0.02" upper="0.07" velocity="1.0" />
+        <origin rpy="0 0 0" xyz="-0.010 0 0.08" />
         <parent link="wrist_roll_link" />
         <child link="left_gripper_link" />
     </joint>
