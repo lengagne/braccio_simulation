@@ -22,8 +22,9 @@
   <link name="world"/>
 
   <joint name="fixed" type="fixed">
-    <parent link="world"/>
-    <child link="base_link"/>
+        <origin xyz="0 0 0.01" rpy="0 0 0"/>
+        <parent link="world"/>
+        <child link="base_link"/>
   </joint>    
     
     <link name="base_link">
@@ -217,6 +218,34 @@
         </inertial>                  
     </link>
 
+    <link name="camera_link">
+        <inertial>
+            <mass value="0.01" />
+            <origin xyz="0 0 0" />
+            <inertia ixx="0.001"  ixy="0.0"  ixz="0.0"
+                    iyy="0.001"  iyz="0.0"
+                    izz="0.001" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.02 0.10 0.02" />
+            </geometry>
+            <material name="Cyan">
+                <color rgba="0 1.0 1.0 1.0"/>
+            </material>            
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.02 0.1 0.02" />
+            </geometry>
+        </collision>
+    </link>
+
+    
+    
+    
     <joint name="base_joint" type="revolute">
         <axis xyz="0 0 1" />
         <limit effort="1000.0" lower="0.0" upper="3.1416" velocity="1.0" />
@@ -273,8 +302,11 @@
         <parent link="wrist_roll_link" />
         <child link="left_gripper_link" />
     </joint>
-
-    
+    <joint name="camera_joint" type="fixed">
+        <origin xyz="0 0.04 0" rpy="-1.57 -1.57 0" />
+        <parent link="wrist_roll_link" />
+        <child link="camera_link"/>
+    </joint>    
     <xacro:include filename="$(find braccio_arm_description)/urdf/braccio_arm.gazebo" />
     
 </robot>

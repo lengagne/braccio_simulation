@@ -9,5 +9,12 @@
 	output="screen" ns="/braccio_arm" args="base_joint_position_controller 
         shoulder_joint_position_controller elbow_joint_position_controller wrist_pitch_joint_position_controller
         wrist_roll_joint_position_controller gripper_joint_position_controller sub_gripper_joint_position_controller joint_state_controller"/>
+  
 
+  <node pkg="robot_state_publisher" type="robot_state_publisher" name="braccio_tf_publisher" >
+      <remap from="robot_description" to="robot_description" />
+      <remap from="joint_states" to="/braccio_arm/joint_states" />
+    </node>    
+  
+  
 </launch>
