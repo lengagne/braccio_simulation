@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro"> 
+ <xacro:macro name="aruco_basket" params="t1 t2 t3 t4 t5 l w h dim_marker m "> 
+   <inertial>
+      <origin xyz="0 0 0" />
+      <mass value="${m}" />
+      <inertia  ixx="${m*m/12.0}" ixy="0.0"  ixz="0.0"  iyy="${m*m/12.0}"  iyz="0.0"  izz="${m*m/12.0}" />
+    </inertial>
+    <visual>
+      <origin xyz="${l/2.0+0.001} 0 -${dim_marker/2.0}"/>
+      <geometry>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker${t1}/meshes/Marker${t1}.dae" scale="${2.0*dim_marker} ${2.0*dim_marker} ${2.0*dim_marker}"/>
+      </geometry>
+    </visual>
+    <visual>
+      <origin xyz="${l/2.0} 0 0"/>
+      <geometry>
+        <box size="${0.001} ${w} ${h}" />
+      </geometry>
+    </visual>    
+    <visual>
+      <geometry>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker${t2}/meshes/Marker${t2}.dae" scale="${2.0*dim_marker} ${2.0*dim_marker} ${2.0*dim_marker}"/>
+      </geometry>      
+        <origin xyz="0 -${w/2.0+0.001} -${dim_marker/2.0}"  rpy="0 0 1.57"/>
+    </visual>    
+    <visual>
+      <origin xyz="0 -${w/2.0} 0"/>
+      <geometry>
+        <box size="${l} 0.001 ${h}" />
+      </geometry>
+    </visual>    
+    <visual>
+      <geometry>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker${t3}/meshes/Marker${t3}.dae" scale="${2.0*dim_marker} ${2.0*dim_marker} ${2.0*dim_marker}"/>
+      </geometry>      
+        <origin xyz="-${l/2.0+0.001} 0 -${dim_marker/2.0}"  rpy="0 0 3.14"/>
+    </visual>  
+    <visual>
+      <origin xyz="${-l/2.0} 0 0"/>
+      <geometry>
+        <box size="${0.001} ${w} ${h}" />
+      </geometry>
+    </visual>      
+   <visual>
+      <geometry>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker${t4}/meshes/Marker${t4}.dae" scale="${2.0*dim_marker} ${2.0*dim_marker} ${2.0*dim_marker}"/>
+      </geometry>      
+        <origin xyz="0 ${w/2.0+0.001} ${-dim_marker/2.0}"  rpy="0 0 -1.57"/>
+    </visual>   
+    <visual>
+      <origin xyz="0 ${w/2.0} 0"/>
+      <geometry>
+        <box size="${l} 0.001 ${h}" />
+      </geometry>
+    </visual>           
+    <collision>
+        <origin xyz="${l/2.0} 0 0"/>
+        <geometry>
+            <box size="${0.001} ${w} ${h}" />
+        </geometry>
+    </collision>    
+    <collision>
+      <origin xyz="0 -${w/2.0} 0"/>
+      <geometry>
+        <box size="${l} 0.001 ${h}" />
+      </geometry>
+    </collision>    
+    <collision>
+      <origin xyz="${-l/2.0} 0 0"/>
+      <geometry>
+        <box size="${0.001} ${w} ${h}" />
+      </geometry>
+    </collision>    
+    <collision>
+      <origin xyz="0 ${w/2.0} 0"/>
+      <geometry>
+        <box size="${l} 0.001 ${h}" />
+      </geometry>
+    </collision>        
+</xacro:macro>     
+</robot>

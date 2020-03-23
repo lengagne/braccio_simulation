@@ -1,9 +1,5 @@
 <?xml version="1.0"?>
 <launch>
-
-    <include file="$(find braccio_arm_gazebo)/launch/braccio_world1.launch" /> 
-    
-    
     <node name="joystick" pkg="joy" type="joy_node" />
 
     <node name="control_joystick" pkg="braccio_arm_usb_pad" type="JoyControl.py"/>
