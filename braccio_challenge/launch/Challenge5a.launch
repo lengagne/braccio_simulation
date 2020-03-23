@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<launch>
+
+    <include file="$(find braccio_challenge)/launch/empty_world.launch" />
+    
+    <node name="urdf_spawner_cube1" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube1 -x 0.15 -y -0.16 -z 0.1 -Y 0.1 -param cube1"/>  
+    <node name="urdf_spawner_cube11" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube11 -x 0.2 -y 0.16 -z 0.1 -Y 0.0 -param cube11"/>  
+    
+</launch>

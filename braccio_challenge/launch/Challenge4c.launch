@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+
+    <include file="$(find braccio_challenge)/launch/empty_world.launch" />
+    
+    <node name="urdf_spawner_cube1" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube1 -x -0.15 -y -0.16 -z 0.1 -Y 0.1 -param cube1"/>  
+    <node name="urdf_spawner_cube2" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube2 -x -0.15 -y -0.16 -z 0.2 -Y 0.2 -param cube2"/>  
+    <node name="urdf_spawner_cube3" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube3 -x -0.17 -y 0.18 -z 0.1 -Y 0.3 -param cube3"/>  
+    <node name="urdf_spawner_cube4" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube4 -x -0.17 -y 0.18 -z 0.2 -Y 0.4 -param cube4"/>      
+    <node name="urdf_spawner_cube5" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube5 -x 0.19 -y -0.2 -z 0.1 -Y 0.4 -param cube5"/>      
+    <node name="urdf_spawner_cube6" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube6 -x 0.19 -y -0.2 -z 0.2 -Y 0.4 -param cube6"/>          
+    <node name="urdf_spawner_basket1" pkg="gazebo_ros" type="spawn_model" args="-urdf -model basket1 -x 0.25 -y 0.13 -z 0.075 -Y=0.2   -param basket1"/>  
+    
+</launch>

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch>
+
+    <include file="$(find braccio_challenge)/launch/empty_world.launch" />
+    
+    <node name="urdf_spawner_cube1" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube1 -x -0.15 -y -0.16 -z 0.1 -Y 0.1 -param cube1"/>  
+    <node name="urdf_spawner_cube2" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube2 -x 0.15 -y -0.06 -z 0.2 -Y 0.2 -param cube2"/>  
+    <node name="urdf_spawner_cube3" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube3 -x -0.17 -y 0.08 -z 0.1 -Y 0.3 -param cube3"/>  
+    <node name="urdf_spawner_cube4" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube4 -x 0.17 -y 0.18 -z 0.2 -Y 0.4 -param cube4"/>      
+    <node name="urdf_spawner_cube11" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube11 -x 0.25 -y 0.1 -z 0.1 -Y 0.1 -param cube11"/>  
+    <node name="urdf_spawner_cube12" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube12 -x 0.25 -y 0.1 -z 0.2 -Y 0.2 -param cube12"/>  
+    <node name="urdf_spawner_cube13" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube13 -x 0.25 -y 0.1 -z 0.3 -Y 0.3 -param cube13"/>  
+    <node name="urdf_spawner_cube14" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube14 -x 0.25 -y 0.1 -z 0.4 -Y 0.4 -param cube14"/>      
+    <node name="urdf_spawner_cube15" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube15 -x 0.25 -y -0.1 -z 0.1 -Y 0.1 -param cube15"/>  
+    <node name="urdf_spawner_cube16" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube16 -x 0.25 -y -0.1 -z 0.2 -Y 0.2 -param cube16"/>  
+    <node name="urdf_spawner_cube17" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube17 -x 0.25 -y -0.1 -z 0.3 -Y 0.3 -param cube17"/>  
+    <node name="urdf_spawner_cube18" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube18 -x 0.25 -y -0.1 -z 0.4 -Y 0.4 -param cube18"/>      
+    <node name="urdf_spawner_basket2" pkg="gazebo_ros" type="spawn_model" args="-urdf -model basket2 -x 0.25 -y 0.0 -z 0.05   -param basket2"/>      
+    
+</launch>

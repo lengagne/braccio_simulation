@@ -1,34 +1,16 @@
 <?xml version="1.0"?>
 <launch>
 
-    <include file="$(find braccio_arm_gazebo)/launch/braccio_empty_world.launch" /> 
+    <include file="$(find braccio_challenge)/launch/empty_world.launch" />
     
-    
-    <param name="cube1" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube1.xacro'" />
     <node name="urdf_spawner_cube1" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube1 -x 0.2 -y 0.2 -z 0.2 -param cube1"/>  
-
-    <param name="cube2" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube2.xacro'" />
     <node name="urdf_spawner_cube2" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube2 -x -0.2 -y 0.2 -z 0.2 -param cube2"/>  
-
-    <param name="cube3" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube3.xacro'" />
     <node name="urdf_spawner_cube3" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube3 -x 0.2 -y -0.2 -z 0.2 -param cube3"/>  
-
-    <param name="cube5" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube5.xacro'" />
     <node name="urdf_spawner_cube5" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube5 -x -0.2 -y -0.2 -z 0.2 -param cube5"/>      
-
-    <param name="cube7" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube7.xacro'" />
     <node name="urdf_spawner_cube7" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube7 -x -0.25 -y -0.2 -z 0.3 -param cube7"/>      
-
-    <param name="cube11" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube11.xacro'" />
     <node name="urdf_spawner_cube11" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube11 -x -0.25 -y 0.2 -z 0.3 -param cube11"/>   
-    
-    <param name="cube13" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube13.xacro'" />
     <node name="urdf_spawner_cube13" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube13 -x 0.25 -y -0.2 -z 0.3 -param cube13"/>   
-
-    <param name="cube17" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube17.xacro'" />
     <node name="urdf_spawner_cube17" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube17 -x 0.25 -y 0.2 -z 0.3 -param cube17"/>       
-
-    <param name="cube19" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube19.xacro'" />
     <node name="urdf_spawner_cube19" pkg="gazebo_ros" type="spawn_model" args="-urdf -model cube19 -x -0.1 -y -0.1 -z 0.11 -param cube19"/>  
     
 </launch>
