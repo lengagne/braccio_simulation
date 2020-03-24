@@ -1,0 +1,11 @@
+The proposed packages are under the postcardware License : 
+
+You're free to use this package, but if it makes it to your production environment we highly appreciate you sending us a postcard from your hometown mentioning which of our package(s) you are using.
+
+Our address is: 
+
+Sébastien Lengagne, 
+Assistant Professor, Institut Pascal / POLYTECH Clermont-Ferrand
+UMR CNRS 6602, Campus Universitaire des Cézeaux
+4 Avenue Blaise Pascal
+63178 AUBIERE CEDEX 
