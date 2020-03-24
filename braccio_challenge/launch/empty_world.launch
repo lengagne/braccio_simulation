@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <launch>
 
-
+<!-- run the simulateur and define the objects -->
     <include file="$(find braccio_arm_gazebo)/launch/braccio_empty_world.launch" /> 
     <param name="cube1" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube1.xacro'" />
     <param name="cube2" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube2.xacro'" />
@@ -26,5 +26,19 @@
 
     <param name="basket1" command="$(find xacro)/xacro.py '$(find braccio_challenge)/urdf/basket1.xacro'" />
     <param name="basket2" command="$(find xacro)/xacro.py '$(find braccio_challenge)/urdf/basket2.xacro'" />
+    
+<!--run aruco from the camera      -->
+    <node pkg="aruco_ros" type="marker_publisher" name="aruco_marker_publisher">
+            <remap from="/camera_info" to="/braccio_arm/camera/camera_info" />
+            <remap from="/image" to="/braccio_arm/camera/image_raw" />
+            <param name="image_is_rectified" value="True"/>
+            <param name="camera_frame"       value="camera_link"/>   
+            <param name="reference_frame"    value="camera_link"/>   <!-- frame in which the marker pose will be refered -->
+            <param name="marker_size"        value="0.04"/>
+    </node>	
 
+    <node name="viewer" pkg="image_view" type="image_view">
+            <remap from="/image" to="/aruco_marker_publisher/result"/>
+    </node>
+    
 </launch>
