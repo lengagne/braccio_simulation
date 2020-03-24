@@ -2,11 +2,11 @@
 <robot name="braccio_arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
     
     
-      <xacro:macro name="box_inertia" params="m x y z">
+      <macro name="box_inertia" params="m x y z">
         <inertia  ixx="${m*(y*y+z*z)/12}" ixy = "0" ixz = "0"
                   iyy="${m*(x*x+z*z)/12}" iyz = "0"
                   izz="${m*(x*x+z*z)/12}" /> 
-      </xacro:macro>    
+      </macro>    
       
 
     <material name="orange">
@@ -305,6 +305,6 @@
         <parent link="wrist_roll_link" />
         <child link="camera_link"/>
     </joint>    
-    <xacro:include filename="$(find braccio_arm_description)/urdf/braccio_arm.gazebo" />
+    <include filename="$(find braccio_arm_description)/urdf/braccio_arm.gazebo" />
     
 </robot>

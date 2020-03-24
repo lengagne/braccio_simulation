@@ -3,29 +3,29 @@
 
 <!-- run the simulateur and define the objects -->
     <include file="$(find braccio_arm_gazebo)/launch/braccio_empty_world.launch" /> 
-    <param name="cube1" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube1.xacro'" />
-    <param name="cube2" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube2.xacro'" />
-    <param name="cube3" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube3.xacro'" />
-    <param name="cube4" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube4.xacro'" />
-    <param name="cube5" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube5.xacro'" />
-    <param name="cube6" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube6.xacro'" />
-    <param name="cube7" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube7.xacro'" />
-    <param name="cube8" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube8.xacro'" />
-    <param name="cube9" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube9.xacro'" />
-    <param name="cube10" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube10.xacro'" />
-    <param name="cube11" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube11.xacro'" />
-    <param name="cube12" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube12.xacro'" />
-    <param name="cube13" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube13.xacro'" />
-    <param name="cube14" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube14.xacro'" />
-    <param name="cube15" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube15.xacro'" />
-    <param name="cube16" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube16.xacro'" />
-    <param name="cube17" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube17.xacro'" />
-    <param name="cube18" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube18.xacro'" />
-    <param name="cube19" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube19.xacro'" />
-    <param name="cube20" command="$(find xacro)/xacro.py '$(find braccio_arm_gazebo)/urdf/cube20.xacro'" />
+    <param name="cube1" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube1.xacro'" />
+    <param name="cube2" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube2.xacro'" />
+    <param name="cube3" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube3.xacro'" />
+    <param name="cube4" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube4.xacro'" />
+    <param name="cube5" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube5.xacro'" />
+    <param name="cube6" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube6.xacro'" />
+    <param name="cube7" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube7.xacro'" />
+    <param name="cube8" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube8.xacro'" />
+    <param name="cube9" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube9.xacro'" />
+    <param name="cube10" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube10.xacro'" />
+    <param name="cube11" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube11.xacro'" />
+    <param name="cube12" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube12.xacro'" />
+    <param name="cube13" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube13.xacro'" />
+    <param name="cube14" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube14.xacro'" />
+    <param name="cube15" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube15.xacro'" />
+    <param name="cube16" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube16.xacro'" />
+    <param name="cube17" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube17.xacro'" />
+    <param name="cube18" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube18.xacro'" />
+    <param name="cube19" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube19.xacro'" />
+    <param name="cube20" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube20.xacro'" />
 
-    <param name="basket1" command="$(find xacro)/xacro.py '$(find braccio_challenge)/urdf/basket1.xacro'" />
-    <param name="basket2" command="$(find xacro)/xacro.py '$(find braccio_challenge)/urdf/basket2.xacro'" />
+    <param name="basket1" command="$(find xacro)/xacro '$(find braccio_challenge)/urdf/basket1.xacro'" />
+    <param name="basket2" command="$(find xacro)/xacro '$(find braccio_challenge)/urdf/basket2.xacro'" />
     
 <!--run aruco from the camera      -->
     <node pkg="aruco_ros" type="marker_publisher" name="aruco_marker_publisher">

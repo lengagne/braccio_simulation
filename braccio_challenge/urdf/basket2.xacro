@@ -1,7 +1,7 @@
 <?xml version="4.0"?>
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <xacro:include filename="$(find braccio_challenge)/urdf/basket.xacro" />
+    <include filename="$(find braccio_challenge)/urdf/basket.xacro" />
     <link name="world"/>
 
     <joint name="fixed" type="fixed">
@@ -10,7 +10,7 @@
             <child link="my_box"/>
     </joint>       
     <link name="my_box">
-        <aruco_basket t1="0" t2="1" t3="2" t4="3" t5="4" l="0.1" w="0.11" h="0.1" dim_marker="0.05" m="0.05"/>
+        <aruco_basket t1="5" t2="6" t3="7" t4="8"  l="0.1" w="0.1" h="0.1" dim_marker="0.05" m="0.05"/>
     </link>
     <gazebo reference="my_box">
     <mu1>100.0</mu1>
