@@ -13,5 +13,7 @@ git clone https://github.com/pal-robotics/aruco_ros.git
 
 
 
-You can test your installation by downloading and playing the following bag : 
+You can test your installation by downloading and playing the following bag (for the Challenge1)
 https://forge.clermont-universite.fr/attachments/download/13770/Challenge1_fail_and_grasping.bag
+
+You should have the following simulation : 
