@@ -19,4 +19,4 @@ You can test your installation by downloading and playing the following bag (for
 https://forge.clermont-universite.fr/attachments/download/13770/Challenge1_fail_and_grasping.bag
 
 You should have the following simulation : 
-[![SC2 Video](https://img.youtube.com/vi/--Va-gtNFUUMA/0.jpg)](http://www.youtube.com/watch?v=--Va-gtNFUUMA)
+[![SC2 Video](https://img.youtube.com/vi/Va-gtNFUUMA/0.jpg)](http://www.youtube.com/Va-gtNFUUMA)
