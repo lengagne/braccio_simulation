@@ -218,7 +218,7 @@
         </inertial>                  
     </link>
 
-<!--    <link name="camera_link">
+ <!--   <link name="camera_link">
         <inertial>
             <mass value="0.01" />
             <origin xyz="0 0 0" />

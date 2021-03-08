@@ -1,26 +1,26 @@
-braccio_camera:
+camera:
     # Publish all joint states -----------------------------------
-  braccio_camera_state_controller:
+  camera_state_controller:
     type: joint_state_controller/JointStateController
     publish_rate: 10
     
-  braccio_camera_base_joint_position_controller:
+  camera_base_controller:
     type: effort_controllers/JointPositionController
-    joint: base_joint
+    joint: rotate
     pid: {p: 50.0, i: 0.2, d: 0.3}
 
-  braccio_camera_base_depth_position_controller:
+  camera_depth_controller:
     type: effort_controllers/JointPositionController
-    joint: base_depth
+    joint: depth
     pid: {p: 50.0, i: 0.2, d: 0.3}
     
-  braccio_camera_base_height_position_controller:
+  camera_height_controller:
     type: effort_controllers/JointPositionController
-    joint: base_height
+    joint: height
     pid: {p: 50.0, i: 0.2, d: 0.3}
     
-  braccio_camera_tilt_position_controller:
+  camera_tilt_controller:
     type: effort_controllers/JointPositionController
-    joint: camera_tilt
+    joint: tilt
     pid: {p: 50.0, i: 0.2, d: 0.3}
     

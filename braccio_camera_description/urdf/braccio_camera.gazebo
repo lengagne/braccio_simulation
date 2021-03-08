@@ -3,49 +3,49 @@
     
  <gazebo>
    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-     <robotNamespace>/braccio_camera</robotNamespace>
+     <robotNamespace>/camera</robotNamespace>
    </plugin>
  </gazebo>
 
- <transmission name="base_joint_transmission">
+ <transmission name="rotate_transmission">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="base_joint">
+    <joint name="rotate">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="base_joint_motor">
+    <actuator name="rotate_motor">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
 </transmission>
 
- <transmission name="base_depth_transmission">
+ <transmission name="depth_transmission">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="base_depth">
+    <joint name="depth">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="base_depth_motor">
+    <actuator name="depth_motor">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
 </transmission>
 
- <transmission name="base_height_transmission">
+ <transmission name="height_transmission">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="base_height">
+    <joint name="height">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="base_height_motor">
+    <actuator name="height_motor">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
 </transmission>
 
- <transmission name="camera_tilt_transmission">
+ <transmission name="tilt_transmission">
     <type>transmission_interface/SimpleTransmission</type>
-    <joint name="camera_tilt">
+    <joint name="tilt">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
     </joint>
-    <actuator name="camera_tilt_motor">
+    <actuator name="tilt_motor">
       <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
       <mechanicalReduction>1</mechanicalReduction>
     </actuator>
@@ -61,7 +61,7 @@
         <image>
           <width>640</width>
           <height>480</height>
-<!--           <format>R8G8B8</format> -->
+
         </image>
         <clip>
           <near>0.02</near>
@@ -76,7 +76,7 @@
       <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
         <alwaysOn>true</alwaysOn>
         <updateRate>0.0</updateRate>
-        <cameraName>braccio_camera/camera</cameraName>
+        <cameraName>camera</cameraName>
         <imageTopicName>image_raw</imageTopicName>
         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
         <frameName>camera_link</frameName>

@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<robot name="braccio_camera" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<robot name="camera" xmlns:xacro="http://www.ros.org/wiki/xacro">
     
   <link name="world"/>
     <link name="body1">
@@ -56,7 +56,7 @@
         </collision>-->
     </link>
 
-    <joint name="base_joint" type="revolute">
+    <joint name="rotate" type="revolute">
         <axis xyz="0 0 1" />
         <limit effort="20.0" lower="-100.0" upper="100" velocity="0.1" />
         <origin rpy="0 0 0" xyz="0 0 0" />
@@ -64,7 +64,7 @@
         <child link="body1" />
     </joint>
 
-    <joint name="base_depth" type="prismatic">
+    <joint name="depth" type="prismatic">
         <axis xyz="1 0 0" />
         <limit effort="20.0" lower="00.0" upper="100" velocity="0.1" />
         <origin rpy="0 0 0" xyz="0 0 0" />
@@ -72,7 +72,7 @@
         <child link="body2" />
     </joint>    
     
-    <joint name="base_height" type="prismatic">
+    <joint name="height" type="prismatic">
         <axis xyz="0 0 1" />
         <limit effort="20.0" lower="00.0" upper="100" velocity="0.1" />
         <origin rpy="0 0 0" xyz="0 0 0" />
@@ -80,7 +80,7 @@
         <child link="body3" />
     </joint>        
     
-    <joint name="camera_tilt" type="revolute">
+    <joint name="tilt" type="revolute">
         <axis xyz="0 1 0" />
         <limit effort="2.0" lower="-3.14" upper="3.14" velocity="0.1" />
         <origin rpy="0 0 0" xyz="0 0 0" />

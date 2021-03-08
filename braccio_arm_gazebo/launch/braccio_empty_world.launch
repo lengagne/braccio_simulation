@@ -1,15 +1,12 @@
 <?xml version="1.0"?>
 <launch>
-
-
   <!-- these are the arguments you can pass this launch file, for example paused:=true -->
   <arg name="paused" default="true"/>
   <arg name="use_sim_time" default="true"/>
   <arg name="gui" default="true"/>
   <arg name="headless" default="false"/>
   <arg name="debug" default="false"/>
-
-
+  <arg name="use_camera" default="false"/>
   
 
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
@@ -21,34 +18,37 @@
     <arg name="headless" value="$(arg headless)"/>
   </include>
 
+<!--   <group ns="robot"> -->
+<!--          <param name="tf_prefix" value="robot1_tf" /> -->
   <!-- Load the URDF into the ROS Parameter Server -->
-<!--   <param name="robot_description" command="$(find xacro)/xacro '$(find braccio_arm_description)/urdf/braccio_arm.xacro'" />   -->
+<!--   <param name="robot_description" command="$(find xacro)/xacro  '$(find braccio_arm_description)/urdf/braccio_arm.xacro'" />  
   
- <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
-<!--   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" args="-urdf -model braccio_arm -param robot_description
+   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model braccio_arm  -verbose
         -J base_joint 1.57 
         -J shoulder_joint 1.57
         -J elbow_joint 1.57
         -J wrist_pitch_joint 1.57
         -J wrist_roll_joint 1.57
         -J gripper_joint 0.05
-         -J sub_gripper_joint 0.05"/>-->
-
-  <!-- ros_control mobile_robot launch file -->
-<!--   <include file="$(find braccio_arm_control)/launch/braccio_arm_control.launch" />  -->
+         -J sub_gripper_joint 0.05" respawn="false"/>
+   
+   <include file="$(find braccio_arm_control)/launch/braccio_arm_control.launch" /> -->
+<!-- </group> -->
+  
   
 <!--   <node name="VectorTranslator" pkg="braccio_arm_gazebo" type="braccio_arm_vector_input"/>   -->
+<!-- </group> -->
+
+<!-- <group ns="cam" > -->
+   <param name="robot_description" command="$(find xacro)/xacro  '$(find braccio_camera_description)/urdf/braccio_camera.xacro'" />
   
-  
-  
-<!--   <param name="camera_description" command="$(find xacro)/xacro '$(find braccio_camera_description)/urdf/braccio_camera.xacro'" /> -->
-  <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
-<!--  <node name="urdf_spawner_camera" pkg="gazebo_ros" type="spawn_model" args="-urdf -model braccio_camera -param camera_description
-        -J base_joint 0
-        -J base_depth 0.6
-        -J base_height 0.5
-        -J camera_tilt -0.2"/>  -->
+    <node name="urdf_spawner_camera" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model camera
+        -J rotate 0
+        -J depth 0.6
+        -J height 0.5
+        -J tilt -0.2" respawn="false" output="screen"/>  
     
-<!--   <include file="$(find braccio_camera_control)/launch/braccio_camera_control.launch" />  -->
+    <include file="$(find braccio_camera_control)/launch/braccio_camera_control.launch" /> 
+<!-- </group> -->
 
 </launch>
