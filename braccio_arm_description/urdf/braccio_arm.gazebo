@@ -112,16 +112,15 @@
     </plugin>
 </gazebo>
 
-  <gazebo reference="camera_link">
-    <sensor type="camera" name="camera1">
+<!--  <gazebo reference="camera_link">
+    <sensor type="camera" name="camera_embarquee">
         <parent link="camera_link"/>
       <update_rate>10.0</update_rate>
-      <camera name="Camera">
+      <camera name="camera_embarquee">
         <horizontal_fov>1.3962634</horizontal_fov>
         <image>
           <width>640</width>
           <height>480</height>
-<!--           <format>R8G8B8</format> -->
         </image>
         <clip>
           <near>0.02</near>
@@ -148,7 +147,7 @@
         <distortionT2>0.0</distortionT2>
       </plugin>
     </sensor>
-  </gazebo>
+  </gazebo>-->
 
   
 </robot>

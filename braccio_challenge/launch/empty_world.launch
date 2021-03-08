@@ -2,7 +2,8 @@
 <launch>
 
 <!-- run the simulateur and define the objects -->
-    <include file="$(find braccio_arm_gazebo)/launch/braccio_empty_world.launch" /> 
+    <include file="$(find braccio_arm_gazebo)/launch/braccio_empty_world.launch" />   
+    
     <param name="cube1" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube1.xacro'" />
     <param name="cube2" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube2.xacro'" />
     <param name="cube3" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube3.xacro'" />

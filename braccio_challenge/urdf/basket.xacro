@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro"> 
- <macro name="aruco_basket" params="t1 t2 t3 t4 l w h dim_marker m "> 
+ <xacro:macro name="aruco_basket" params="t1 t2 t3 t4 l w h dim_marker m "> 
    <inertial>
       <origin xyz="0 0 0" />
       <mass value="${m}" />
@@ -78,5 +78,5 @@
         <box size="${l} 0.001 ${h}" />
       </geometry>
     </collision>        
-</macro>     
+</xacro:macro>     
 </robot>

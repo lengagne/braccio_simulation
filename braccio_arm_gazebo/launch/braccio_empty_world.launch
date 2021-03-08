@@ -9,12 +9,11 @@
   <arg name="headless" default="false"/>
   <arg name="debug" default="false"/>
 
-  <!-- Load the URDF into the ROS Parameter Server -->
-  <param name="robot_description" command="$(find xacro)/xacro.py '$(find braccio_arm_description)/urdf/braccio_arm.xacro'" />
+
+  
 
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-<!--     <arg name="world_name"  default="$(find mobile_robot_gazebo)/worlds/labyrinthe1.world"/> -->
     <arg name="debug" value="$(arg debug)" />
     <arg name="gui" value="$(arg gui)" />
     <arg name="paused" value="$(arg paused)"/>
@@ -22,19 +21,34 @@
     <arg name="headless" value="$(arg headless)"/>
   </include>
 
-  <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
-  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" args="-urdf -model braccio_arm -param robot_description
+  <!-- Load the URDF into the ROS Parameter Server -->
+<!--   <param name="robot_description" command="$(find xacro)/xacro '$(find braccio_arm_description)/urdf/braccio_arm.xacro'" />   -->
+  
+ <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+<!--   <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" args="-urdf -model braccio_arm -param robot_description
         -J base_joint 1.57 
         -J shoulder_joint 1.57
         -J elbow_joint 1.57
         -J wrist_pitch_joint 1.57
         -J wrist_roll_joint 1.57
         -J gripper_joint 0.05
-        -J sub_gripper_joint 0.05"/>
+         -J sub_gripper_joint 0.05"/>-->
 
-  <node name="VectorTranslator" pkg="braccio_arm_gazebo" type="braccio_arm_vector_input"/>
-  
   <!-- ros_control mobile_robot launch file -->
-  <include file="$(find braccio_arm_control)/launch/braccio_arm_control.launch" /> 
+<!--   <include file="$(find braccio_arm_control)/launch/braccio_arm_control.launch" />  -->
+  
+<!--   <node name="VectorTranslator" pkg="braccio_arm_gazebo" type="braccio_arm_vector_input"/>   -->
+  
+  
+  
+<!--   <param name="camera_description" command="$(find xacro)/xacro '$(find braccio_camera_description)/urdf/braccio_camera.xacro'" /> -->
+  <!-- Run a python script to the send a service call to gazebo_ros to spawn a URDF robot -->
+<!--  <node name="urdf_spawner_camera" pkg="gazebo_ros" type="spawn_model" args="-urdf -model braccio_camera -param camera_description
+        -J base_joint 0
+        -J base_depth 0.6
+        -J base_height 0.5
+        -J camera_tilt -0.2"/>  -->
+    
+<!--   <include file="$(find braccio_camera_control)/launch/braccio_camera_control.launch" />  -->
 
 </launch>

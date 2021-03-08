@@ -1,7 +1,7 @@
 <?xml version="4.0"?>
 
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <include filename="$(find braccio_challenge)/urdf/basket.xacro" />
+    <xacro:include filename="$(find braccio_challenge)/urdf/basket.xacro" />
     <link name="world"/>
 
     <joint name="fixed" type="fixed">
