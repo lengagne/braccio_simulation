@@ -39,7 +39,7 @@
 <!--   <node name="VectorTranslator" pkg="braccio_arm_gazebo" type="braccio_arm_vector_input"/>   -->
 <!-- </group> -->
 
-<!-- <group ns="cam" > -->
+<!-- <group ns="camera" > -->
    <param name="robot_description" command="$(find xacro)/xacro  '$(find braccio_camera_description)/urdf/braccio_camera.xacro'" />
   
     <node name="urdf_spawner_camera" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model camera
@@ -49,6 +49,7 @@
         -J tilt -0.2" respawn="false" output="screen"/>  
     
     <include file="$(find braccio_camera_control)/launch/braccio_camera_control.launch" /> 
+
 <!-- </group> -->
 
 </launch>

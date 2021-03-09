@@ -2,8 +2,9 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
     
  <gazebo>
-   <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
-     <robotNamespace>/camera</robotNamespace>
+   <plugin name="camera_gazebo_ros_control" filename="libgazebo_ros_control.so">
+     <robotNamespace>/camera/</robotNamespace>
+     <robotParam>robot_description</robotParam>
    </plugin>
  </gazebo>
 

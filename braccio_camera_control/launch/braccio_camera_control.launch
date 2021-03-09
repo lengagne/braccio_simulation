@@ -5,7 +5,7 @@
   <rosparam file="$(find braccio_camera_control)/config/braccio_camera_control.yaml" command="load"/>
 
   <!-- load the controllers -->
-  <node name="camera_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+  <node  name="camera_controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
 	output="screen"  ns="camera" args=" camera_state_controller 
                                         camera_base_controller 
                                         camera_depth_controller 
@@ -15,7 +15,7 @@
   
 
     <node pkg="robot_state_publisher" type="robot_state_publisher" ns="/camera" name="tf_publisher" >
-      <remap from="camera/robot_description" to="robot_description" />
+<!--       <remap from="/camera/camera_description" to="robot_description" /> -->
       <remap from="joint_states" to="/camera/joint_states" />
     </node>    
     
