@@ -32,7 +32,7 @@
         -J camera_rotate 0
         -J camera_depth 0.6
         -J camera_height 0.6
-        -J camera_tilt -0.2
+        -J camera_tilt 0.5
          " respawn="false"/>
    
    <include file="$(find braccio_arm_control)/launch/braccio_arm_and_camera_control.launch" /> 

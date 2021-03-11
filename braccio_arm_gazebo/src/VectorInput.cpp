@@ -43,17 +43,17 @@ void callback_camera(const std_msgs::Float64MultiArray& msg)
 
 int main(int argc, char *argv[])
 {
-    msg_base.data = 1.57; 
-    msg_elbow.data = 1.57; 
+    msg_base.data = 0; 
+    msg_elbow.data = 0; 
     msg_gripper.data = 0.01; 
     msg_shoulder.data = 1.57; 
-    msg_wrist_pitch.data = 1.57; 
-    msg_wrist_roll.data = 1.57; 
+    msg_wrist_pitch.data = 0; 
+    msg_wrist_roll.data = 0; 
     
     msg_camera_rotate.data = 0.0;
-    msg_camera_depth.data = 1.0;
-    msg_camera_height.data = 0.5;
-    msg_camera_tilt.data = -0.2;
+    msg_camera_depth.data = 0.6;
+    msg_camera_height.data = 0.6;
+    msg_camera_tilt.data = 0.5;
     
     ros::init(argc, argv, "braccio_arm_vector_input");
 

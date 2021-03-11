@@ -41,6 +41,49 @@
             <mass value="0.05"/>
             <box_inertia m="0.05" x="0.02" y="0.02" z="0.05"/>
         </inertial>
+        
+    <visual>
+      <origin xyz="-0.1 0.055 -0.01" rpy="0 1.57 0"/>
+      <geometry>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker100/meshes/Marker100.dae" scale="1.0 0.1 0.1"/>
+      </geometry>
+    </visual>        
+    
+    <visual>
+      <origin xyz="-0.1 -0.055 -0.01" rpy="0 1.57 0"/>
+      <geometry>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker101/meshes/Marker101.dae" scale="1.0 0.1 0.1"/>
+      </geometry>
+    </visual>        
+
+    <visual>
+      <origin xyz="-0.035 0.09 -0.01" rpy="0 1.57 0"/>
+      <geometry>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker102/meshes/Marker102.dae" scale="1.0 0.1 0.1"/>
+      </geometry>
+    </visual>        
+
+    <visual>
+      <origin xyz="0.06 0.055 -0.01" rpy="0 1.57 0"/>
+      <geometry>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker103/meshes/Marker103.dae" scale="1.0 0.1 0.1"/>
+      </geometry>
+    </visual>        
+
+    <visual>
+      <origin xyz="0.06 -0.055 -0.01" rpy="0 1.57 0"/>
+      <geometry>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker104/meshes/Marker104.dae" scale="1.0 0.1 0.1"/>
+      </geometry>
+    </visual>        
+
+    <visual>
+      <origin xyz="-0.035 -0.09 -0.01" rpy="0 1.57 0"/>
+      <geometry>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker105/meshes/Marker105.dae" scale="1.0 0.1 0.1"/>
+      </geometry>
+    </visual>        
+        
     </link>
 
     <link name="braccio_arm_base_link">
@@ -219,7 +262,7 @@
         </inertial>                  
     </link>
 
- <!--   <link name="camera_link">
+    <link name="camera_embedded_link">
         <inertial>
             <mass value="0.01" />
             <origin xyz="0 0 0" />
@@ -242,7 +285,7 @@
                 <box size="0.02 0.1 0.02" />
             </geometry>
         </collision>
-    </link>-->
+    </link>
 
     <joint name="base_joint" type="revolute">
         <axis xyz="0 0 1" />
@@ -301,11 +344,11 @@
         <child link="left_gripper_link" />
     </joint>
     
-<!--    <joint name="camera_joint" type="fixed">
+    <joint name="camera_joint" type="fixed">
         <origin xyz="0 0.04 0" rpy="-1.57 -1.57 0" />
         <parent link="wrist_roll_link" />
-        <child link="camera_link"/>
-    </joint>    -->
+        <child link="camera_embedded_link"/>
+    </joint>    
     
       <link name="camera_body1">
         <inertial>
@@ -361,7 +404,7 @@
     <joint name="camera_rotate" type="revolute">
         <axis xyz="0 0 1" />
         <limit effort="20.0" lower="-100.0" upper="100" velocity="0.1" />
-        <origin rpy="0 0 0" xyz="0 0 0" />
+        <origin rpy="0 0 3.14" xyz="0 0 0" />
         <parent link="world" />
         <child link="camera_body1" />
     </joint>
