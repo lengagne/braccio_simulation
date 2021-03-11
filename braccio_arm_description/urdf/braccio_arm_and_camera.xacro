@@ -205,20 +205,6 @@
             <material name="black" />
             <origin rpy="0 -1.5708 0" xyz="0 0 -0.025" />
         </visual>         
-<!--        <visual>
-            <geometry>
-                <mesh filename="package://braccio_arm_description/stl/braccio_left_gripper.stl" scale="0.001 0.001 0.001" />
-            </geometry>
-            <material name="white" />
-            <origin rpy="0 0 0" xyz="0 -0.007 0" />
-        </visual>
-        <visual>
-            <geometry>
-                <mesh filename="package://braccio_arm_description/stl/braccio_left_gripper.stl" scale="0.001 0.001 0.001" />
-            </geometry>
-            <material name="white" />
-            <origin rpy="0 0 0" xyz="0 -0.017 0" />
-        </visual>        -->
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <mass value="0.01"/>
@@ -241,20 +227,6 @@
             <material name="black" />
             <origin rpy="0 -1.5708 0" xyz="0 0 -0.025" />
         </visual>           
-<!--        <visual>
-            <geometry>
-                <mesh filename="package://braccio_arm_description/stl/braccio_right_gripper.stl" scale="0.001 0.001 0.001" />
-            </geometry>
-            <material name="white" />
-            <origin rpy="0 0 0" xyz="0 -0.017 0.010" />
-        </visual>
-        <visual>
-            <geometry>
-                <mesh filename="package://braccio_arm_description/stl/braccio_right_gripper.stl" scale="0.001 0.001 0.001" />
-            </geometry>
-            <material name="white" />
-            <origin rpy="0 0 0" xyz="0 -0.007 0.010" />
-        </visual>   -->     
         <inertial>
             <origin xyz="0 0 0" rpy="0 0 0"/>
             <mass value="0.01"/>
