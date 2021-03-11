@@ -147,7 +147,7 @@
     </plugin>
 </gazebo>
 
-<!--  <gazebo reference="camera_link">
+  <gazebo reference="camera_link">
     <sensor type="camera" name="camera_deporte">
         <parent link="camera_link"/>
       <update_rate>10.0</update_rate>
@@ -170,7 +170,7 @@
         <imageTopicName>image_raw</imageTopicName>
         <cameraInfoTopicName>camera_info</cameraInfoTopicName>
         <frameName>camera_link</frameName>
-        <hackBaseline>0.07</hackBaseline>
+<!--         <hackBaseline>0.07</hackBaseline> -->
         <distortionK1>0.0</distortionK1>
         <distortionK2>0.0</distortionK2>
         <distortionK3>0.0</distortionK3>
@@ -178,8 +178,8 @@
         <distortionT2>0.0</distortionT2>
       </plugin>
     </sensor>
-  </gazebo>-->
-  <gazebo reference="camera_embedded_link">
+  </gazebo>
+<!--  <gazebo reference="camera_embedded_link">
     <sensor type="camera" name="camera_embarquee">
         <parent link="camera_embedded_link"/>
       <update_rate>10.0</update_rate>
@@ -214,6 +214,6 @@
         <distortionT2>0.0</distortionT2>
       </plugin>
     </sensor>
-  </gazebo>
+  </gazebo>-->
   
 </robot>

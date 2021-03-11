@@ -13,7 +13,6 @@
     <param name="cube7" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube7.xacro'" />
     <param name="cube8" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube8.xacro'" />
     <param name="cube9" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube9.xacro'" />
-    <param name="cube10" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube10.xacro'" />
     <param name="cube11" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube11.xacro'" />
     <param name="cube12" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube12.xacro'" />
     <param name="cube13" command="$(find xacro)/xacro '$(find braccio_arm_gazebo)/urdf/cube13.xacro'" />
@@ -34,8 +33,8 @@
             <remap from="/image" to="/braccio_arm/camera/image_raw" />
             <param name="image_is_rectified" value="True"/>
             <param name="camera_frame"       value="camera_link"/>   
-            <param name="reference_frame"    value="world"/>  
-            <param name="marker_size"        value="0.05"/>
+            <param name="reference_frame"    value="camera_link"/>  
+            <param name="marker_size"        value="0.035"/>
     </node>	
 
     <node name="viewer" pkg="image_view" type="image_view">
