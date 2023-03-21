@@ -45,42 +45,42 @@
     <visual>
       <origin xyz="-0.1 0.055 -0.01" rpy="0 1.57 0"/>
       <geometry>
-        <mesh filename="package://braccio_arm_gazebo/urdf/marker09/meshes/Marker09.dae" scale="1.0 0.1 0.1"/>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker100/meshes/Marker100.dae" scale="1.0 0.1 0.1"/>
       </geometry>
     </visual>        
     
     <visual>
       <origin xyz="-0.1 -0.055 -0.01" rpy="0 1.57 0"/>
       <geometry>
-        <mesh filename="package://braccio_arm_gazebo/urdf/marker19/meshes/Marker19.dae" scale="1.0 0.1 0.1"/>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker101/meshes/Marker101.dae" scale="1.0 0.1 0.1"/>
       </geometry>
     </visual>        
 
     <visual>
       <origin xyz="-0.035 0.09 -0.01" rpy="0 1.57 0"/>
       <geometry>
-        <mesh filename="package://braccio_arm_gazebo/urdf/marker29/meshes/Marker29.dae" scale="1.0 0.1 0.1"/>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker102/meshes/Marker102.dae" scale="1.0 0.1 0.1"/>
       </geometry>
     </visual>        
 
     <visual>
       <origin xyz="0.06 0.055 -0.01" rpy="0 1.57 0"/>
       <geometry>
-        <mesh filename="package://braccio_arm_gazebo/urdf/marker39/meshes/Marker39.dae" scale="1.0 0.1 0.1"/>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker103/meshes/Marker103.dae" scale="1.0 0.1 0.1"/>
       </geometry>
     </visual>        
 
     <visual>
       <origin xyz="0.06 -0.055 -0.01" rpy="0 1.57 0"/>
       <geometry>
-        <mesh filename="package://braccio_arm_gazebo/urdf/marker49/meshes/Marker49.dae" scale="1.0 0.1 0.1"/>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker104/meshes/Marker104.dae" scale="1.0 0.1 0.1"/>
       </geometry>
     </visual>        
 
     <visual>
       <origin xyz="-0.035 -0.09 -0.01" rpy="0 1.57 0"/>
       <geometry>
-        <mesh filename="package://braccio_arm_gazebo/urdf/marker59/meshes/Marker59.dae" scale="1.0 0.1 0.1"/>
+        <mesh filename="package://braccio_arm_gazebo/urdf/marker105/meshes/Marker105.dae" scale="1.0 0.1 0.1"/>
       </geometry>
     </visual>        
         
